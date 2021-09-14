@@ -11,4 +11,10 @@ docker build . -t log_analysis_me
 docker run -v $(pwd):/log_analysis log_analysis_me --path=./logs/foo.txt
 ```
 
+# Suit tests
+
+To run suit test just: 
+```shell
+    python3 analysis_test.py
+```
 
