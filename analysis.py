@@ -16,7 +16,10 @@ class Analysis:
 
     def append_parsed_data(self):
         for line in self.lines:
-            self.data.append(json.loads(line))
+            if line: 
+                self.data.append(json.loads(line))
+            else:
+                pass
     
     def data_frame(self):
         return pandas.DataFrame(self.data, columns=['authenticated_entity', 'latencies', 'route'])
